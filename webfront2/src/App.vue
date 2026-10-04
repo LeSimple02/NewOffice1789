@@ -198,7 +198,12 @@ main { min-height: calc(100vh - var(--header-h) - 56px); }
   padding: 32px 28px; background: var(--bg-primary);
   border: 1px solid var(--border); border-radius: var(--r-lg);
   box-shadow: var(--sh-xl); z-index: 1000; text-align: center;
-  animation: popIn .3s var(--ease-spring) both;
+  animation: popInCenter .3s var(--ease-spring) both;
+}
+@keyframes popInCenter {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(.92) }
+  60% { transform: translate(-50%, -50%) scale(1.02) }
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1) }
 }
 #pop p { font-size: 1.0625rem; font-weight: 500; color: var(--text-primary); margin: 0 0 24px 0; line-height: 1.5; }
 .pop-actions { display: flex; gap: 10px; justify-content: center; }
